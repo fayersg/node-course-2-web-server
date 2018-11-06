@@ -47,13 +47,24 @@ app.get ('/',(req,res) => {
     pageTitle: 'Home Page',
     welcomeMessage:'Welcome to my website'
   });
+});
+
+  app.get ('/projects',(req,res) => {
+    //res.send ('<h1>Hello Express</h1>');
+
+    res.render('projects.hbs',
+    {
+      pageTitle: 'Projects',
+      welcomeMessage:'Welcome to my projects page'
+    });
+});
 
 //  res.send ({
 //    name: 'Andrew',
 //    likes: ['Bikes','Cars']
 //  });
 
-});
+
 
   app.get ('/about',(req,res) => {
     res.render('about.hbs',
